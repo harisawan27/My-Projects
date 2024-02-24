@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Parallax Effect using GSAP ScrollTrigger</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<section>
+		<img src="bg.jpg" id="bg">
+		<h2 id="text">Mountains</h2>
+		<img src="man.png" id="man">
+		<img src="clouds_1.png" id="clouds_1">
+		<img src="clouds_2.png" id="clouds_2">
+		<img src="mountain_left.png" id="mountain_left">
+		<img src="mountain_right.png" id="mountain_right">
+	</section>
+	<div class="sec">
+		<h2>Scroll Trigger is Awesome</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc leo tellus, euismod vel lorem quis, volutpat semper tortor. Sed posuere nulla ac urna dapibus feugiat. Sed justo ipsum, ullamcorper ut magna vitae, tempus mollis justo. Quisque facilisis, lorem sit amet facilisis aliquet, metus risus dapibus lorem, a placerat dui turpis vel nibh. Praesent nec tellus lectus. Sed elementum sagittis tortor in rhoncus. Nunc eget nunc tellus. Suspendisse mauris metus, fringilla vel mattis eget, feugiat sit amet felis. Nulla suscipit luctus urna ac feugiat. Nam ornare fermentum diam, sit amet auctor risus rutrum at.<br><br>Donec aliquet porta lacus, sit amet tincidunt dui. Sed elementum ligula euismod arcu ultrices laoreet. Aliquam eu risus accumsan, porta justo vel, tincidunt purus. Nunc sodales vehicula hendrerit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Morbi eu eros pretium, ultricies felis id, egestas dolor. Vestibulum vitae odio ac eros venenatis luctus vitae vel sem. In vel fringilla leo.<br><br>Aenean in suscipit nunc. Curabitur ut eros purus. Mauris a mollis orci. Pellentesque posuere leo quam, vitae aliquet tortor suscipit in. Aenean in condimentum augue. Nam et ullamcorper felis. Sed est orci, pretium non lorem ac, eleifend sollicitudin massa. Duis massa metus, dignissim sit amet augue sed, rhoncus hendrerit nisl. Morbi pulvinar odio vel neque sollicitudin, sit amet porta ex varius. Ut bibendum pellentesque lectus sed scelerisque. Integer nec ultrices nisl.<br><br>Sed commodo dignissim sagittis. Morbi tortor dolor, malesuada blandit leo sit amet, efficitur iaculis lectus. Aliquam in sem venenatis, molestie nisi eget, vulputate risus. Nunc eget mi sit amet quam rutrum pulvinar nec at elit. Integer euismod, mauris vel hendrerit dapibus, dolor diam interdum lectus, in gravida urna massa non sem. Cras velit tellus, vestibulum id auctor non, sollicitudin in mauris. Mauris tellus erat, tincidunt sed elit sit amet, lacinia pulvinar augue. Pellentesque tempus pulvinar nisl, fermentum volutpat augue feugiat sit amet. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur aliquam quam ut arcu rhoncus luctus. Cras at rhoncus massa. Fusce tempor cursus elementum. In auctor neque ullamcorper ante ultricies imperdiet. Cras sit amet justo elit. Vivamus et iaculis urna, sed auctor urna.<br><br>Maecenas varius ultrices sem, vitae efficitur nisi ultricies nec. Aenean vitae sem vel elit sagittis semper vitae eu orci. Cras nulla justo, hendrerit eu mattis vitae, vestibulum non justo. Sed at dolor nisl. Morbi pulvinar nulla lectus, eget aliquam neque pharetra vitae. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed cursus pulvinar bibendum. Fusce lectus nulla, sollicitudin consequat mollis ut, ornare et elit. Vestibulum viverra posuere erat a consectetur.</p>
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
+
+    <script>
+    gsap.to("#bg", {
+    	scrollTrigger : {
+    	scrub : 1
+    	},
+    	scale : 1.5
+    });
+
+    gsap.to("#man", {
+    	scrollTrigger : {
+    	scrub : 1
+    	},
+    	scale : 0.5
+    });
+
+    gsap.to("#mountain_left", {
+    	scrollTrigger : {
+    	scrub : 1
+    	},
+    	x : -500,
+    });
+
+    gsap.to("#mountain_right", {
+    	scrollTrigger : {
+    	scrub : 1
+    	},
+    	x : 500,
+    });
+
+    gsap.to("#clouds_1", {
+    	scrollTrigger : {
+    	scrub : 1
+    	},
+    	x : 200,
+    });
+
+    gsap.to("#clouds_2", {
+    	scrollTrigger : {
+    	scrub : 1
+    	},
+    	x : -200,
+    });
+
+    gsap.to("#text", {
+    	scrollTrigger : {
+    	scrub : 1
+    	},
+    	y : 500,
+    });
+	</script>
+
+</body>
+</html>

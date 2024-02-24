@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,intial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Split Video on Page Scroll</title>
+</head>
+<body>
+	<section>
+		<div class="side" id="side1">
+			<video src="video.mp4" type="video/mp4" autoplay loop muted></video>
+		</div>
+		<div class="side" id="side2">
+			<video src="video.mp4" type="video/mp4" autoplay loop muted></video>
+		</div>
+	</section>
+	<div class="content">
+		<h2>Split Video on Page Scroll</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel velit in mi ultrices tristique ac quis velit. Sed ut mattis mauris, id euismod est. Nulla dapibus nisl ac neque maximus, nec feugiat tellus dignissim. In tincidunt risus id ligula consequat, eleifend pharetra nunc consectetur. Aliquam erat volutpat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque sodales ex tempor lobortis vehicula. Nulla facilisi. Ut lobortis ultrices arcu ac imperdiet. Sed pretium at nisl vel scelerisque. Praesent pellentesque rhoncus felis et venenatis. Nunc eu faucibus mauris, dignissim imperdiet sem. Nullam in augue magna.Integer varius lectus quis arcu molestie, sit amet tristique urna aliquam. Sed non metus sapien. Praesent eros augue, consequat venenatis blandit ac, pretium vitae quam. Donec tincidunt diam quis odio venenatis, dapibus congue odio pellentesque. Ut interdum commodo hendrerit. Donec dictum imperdiet tristique. Sed sed augue tincidunt, auctor mi ut, facilisis arcu.</p>
+	</div>
+
+	<script>
+		let side1 = document.getElementById('side1');
+		let side2 = document.getElementById('side2');
+
+		window.addEventListener('scroll',function() {
+			side1.style.left = -window.pageYOffset+'px';
+			side2.style.left = window.pageYOffset+'px';
+		})
+	</script>
+
+</body>
+</html>

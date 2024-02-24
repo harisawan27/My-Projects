@@ -1,0 +1,160 @@
+body{
+    margin: 0px;
+    padding: 0px; 
+    box-sizing: border-box;
+    background: linear-gradient(57deg, #00c6a7, #1e4d92); 
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+ }
+
+                                     /*IMAGE*/
+div img{
+  height: 104px;
+  width: 100px;
+  margin: 10px;
+ }
+ img{
+  margin-top: 50px;
+ }
+
+                                     /*RIGHTSIDE*/
+ .right {
+  margin-top: -300px;
+  margin-left: 550px; 
+  color: white;
+  text-align: center;
+       
+}
+.right h1{
+  font-size: 35px;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+.right p{
+  font-size: 25px;
+  padding: 20px 0;
+  font-family: Myriad Arabic; 
+}
+.right button{
+  font-size: 17px;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  background: linear-gradient(57deg, #00c6a7, #1e4d92);
+  border-radius: 5px;
+  border: transparent;
+  padding: 20px 35px;
+
+}
+.right button:hover{
+  background: linear-gradient(57deg, #1e4d92, #00c6a7);
+  color:black;
+  transition: unset;
+  transition-duration: 1.5s;
+  text-decoration-line: underline;
+  cursor: pointer;
+}
+ #navigation {
+    padding: 0px;
+    margin: -100px 0px 0px 400px;
+
+  top: 0px;
+  color: #ffffff;
+  height: 35px;
+  width: 520px;
+  text-align: center;
+  padding-top: 15px;
+  /* Adds shadow to the bottom of the bar */
+  -webkit-box-shadow: 0px 0px 8px 0px #000000;
+  -moz-box-shadow: 0px 0px 8px 0px #000000;
+  box-shadow: 0px 0px 8px 0px #000000;
+  /* Adds the transparent background */
+  background-color: rgba(1, 1, 1, 0.8);
+  color: rgba(1, 1, 1, 0.8);
+}
+
+#navigation a {
+  font-size: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: white;
+  text-decoration: none;
+}
+
+#navigation a:hover {
+  color: grey;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,900);
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.Nav {
+  margin: 0px ;
+  width: 620px;
+}
+
+.Nav ul {
+  padding: 0px;
+}
+
+.Nav ul li {
+float: left;	
+  -webkit-transition: all 0.2s;
+  position: relative;
+  list-style: none;
+  z-index: 10;
+  -webkit-box-shadow: 0px 0px 8px 0px #000000;
+  -moz-box-shadow: 0px 0px 8px 0px #000000;
+  box-shadow: 0px 0px 8px 0px #000000;
+  background-color: rgba(1, 1, 1, 0.8);
+  color: rgba(1, 1, 1, 0.8);
+}
+
+.Nav ul li a {
+  text-decoration: none;
+  color: white;
+  padding: 2px;
+  font-family: calibri;
+  display: block;
+  width: 100px;
+  text-align: center;
+}
+
+.Nav ul li ul {
+  position: absolute;
+  visibility: hidden;
+}
+
+.Nav ul li:hover ul {
+  visibility: visible;
+}
+
+.Nav ul li a: hover {
+  color: blue;
+}
+
+.Nav ul li:hover {
+  -webkit-transform: scale(1.1);
+}
+
+
+#footer{
+	width: 100%;
+	height: 55px;
+	background-color:#625498;
+	float: left;
+	text-align: center;
+	font-size: 19px;
+	margin-top: 120px;
+  margin-bottom: 0px;
+}
+#footer p{
+	margin-top: 12px;
+	font-weight: bolder;
+	text-align: center;
+}

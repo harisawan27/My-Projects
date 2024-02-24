@@ -1,0 +1,34 @@
+body{
+	margin-left:  10px;
+	padding: 0px;
+	background: #29313a;
+}
+div img{
+	height: 54px;
+	width: 150px;
+	border: 2px solid orange;
+	margin-left: 10px;
+	padding: 0;
+}	 
+p{
+	color: white;
+}
+img{
+	width: 500px;
+	height: 500px;
+	margin: 10px;
+	padding-left: 65px;
+}
+#footer{
+	width: 100%;
+	height: 55px;
+	background-color:#625498;
+	float: left;
+	text-align: center;
+	font-size: 19px;
+}
+#footer p{
+	margin-top: 12px;
+	font-weight: bolder;
+	text-align: center;
+}

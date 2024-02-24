@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=davice-width, initial-scale=1.0">
+	<title>Custom Music Player</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="music">
+		<h2 class="title">Music Name</h2>
+		<div class="player">
+			<audio src=""></audio>
+			<div class="btns">
+				<span class="prev">
+					<ion-icon name="play-back-outline"></ion-icon>
+				</span>
+				<span class="playPause">
+					<ion-icon name="play-outline"></ion-icon>
+				</span>
+				<span class="next">
+					<ion-icon name="play-forward-outline"></ion-icon>
+				</span>
+			</div>
+		</div>
+	</div>
+	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script> 
+
+
+    <script>
+    	const title = document.querySelector('.title');
+    	const prev = document.querySelector('.prev');
+    	const playPause = document.querySelector('.playPause');
+    	const next = document.querySelector('.next');
+    	const audio = document.querySelector('audio');
+
+    	// first,we will creat song list
+
+    	const songList = [
+    	  {
+    	  	path: "Generic 1.mp3",
+    	  	songName: "Generic 1",
+    	  },
+    	  {
+    	  	path: "Golden Archers And 3 Silver Arrows.mp3",
+    	  	songName: "Golden Archers And 3 Silver Arrows",
+    	  },
+    	  {
+    	  	path: "Ertugrul Son's Osman.mp3",
+    	  	songName: "Ertugrul Son's Osman",
+    	  },
+    	  {
+    	  	path: "Return To Obaya.mp3",
+    	  	songName: "Return To Obaya",
+    	  },
+    	];
+
+    	let song_Playing = false;
+
+    	// play song
+    	function playSong(){
+    		song_Playing = true;
+    		audio.play();
+    		playPause.classList.add('active');
+			// change icon
+			playPause.innerHTML = '<ion-icon name="pause-outline"></ion-icon>';
+    	}
+    	// pause song
+    	function pauseSong(){
+    		song_Playing = false;
+    		audio.pause();
+    		playPause.classList.remove('active');
+			// change icon
+			playPause.innerHTML = '<ion-icon name="play-outline"></ion-icon>'
+    	}
+    	// play or pause song on click
+    	playPause.addEventListener("click", () => (song_Playing ? 
+    	pauseSong() : playSong()));
+    	// load song
+    	function loadSong(songList){
+    		title.textContent = songList.songName;
+    		audio.src = songList.path;
+    	} 
+    	// current song
+    	let i = 0;
+    	// on load - select first song from song list
+    	loadSong(songList[i]);
+
+		// previous song  
+		function prevSong() {
+			i--;
+			if (i < 0){
+				i = songList.length - 1;
+			}
+			loadSong(songList[i]);
+			playSong();
+		}
+		prev.addEventListener("click", prevSong);
+
+
+		// next song  
+		function nextSong() {
+			i++;
+			if (i > songList.length - 1){
+				i = 0;
+			}
+			loadSong(songList[i]);
+			playSong();
+		}
+		next.addEventListener("click", nextSong);
+    </script>
+
+</body>
+</html>
