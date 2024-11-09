@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Inventory Management System</h1>
+    </header>
+
+    <main>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Product Name</th>
+                        <th>Quantity</th>
+                        <th>Price (PKR)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Product rows will go here dynamically -->
+                </tbody>
+            </table>
+        </div>
+    
+        <!-- Input form for products -->
+        <div class="product-form">
+            <input type="text" id="productName" placeholder="Product Name">
+            <input type="number" id="productQuantity" placeholder="Quantity">
+            <input type="number" id="productPrice" placeholder="Price (PKR)">
+            <button onclick="addProduct()">Add Product</button>
+        </div>
+    </main>    
+
+    <footer>
+        <p>Build with &#10084;&#65039; by Muhammad Haris Awan</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
